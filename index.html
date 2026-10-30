@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JK11 Study Hub | Class 11 JKBOSE</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #102a43;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #102a43, #176b87);
+            color: white;
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ffd166;
+            color: #102a43;
+            padding: 12px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+            color: #176b87;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .features {
+            background: #eaf1f8;
+        }
+
+        footer {
+            background: #102a43;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">JK11 Study Hub</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#features">Features</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Learn Smart. Score Better.</h1>
+
+        <p>Your Class 11 JKBOSE Learning Companion.</p>
+
+        <a href="#subjects" class="button">Explore Subjects</a>
+    </section>
+
+    <section class="section" id="subjects">
+        <h2>Explore Your Subjects</h2>
+
+        <p class="section-intro">
+            Everything you need for your Class 11 studies in one place.
+        </p>
+
+        <div class="subjects">
+
+            <div class="card">
+                <h3>Physics</h3>
+                <p>Chapter-wise notes, important formulas, derivations and numericals.</p>
+            </div>
+
+            <div class="card">
+                <h3>Chemistry</h3>
+                <p>Easy explanations, reactions, formulas and important questions.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mathematics</h3>
+                <p>Step-by-step solutions, formulas and chapter-wise practice.</p>
+            </div>
+
+            <div class="card">
+                <h3>English</h3>
+                <p>Hornbill, Snapshots, grammar and writing skills.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section features" id="features">
+        <h2>What You Will Get</h2>
+
+        <div class="subjects">
+
+            <div class="card">
+                <h3>📚 Study Notes</h3>
+                <p>Organised notes for every subject and chapter.</p>
+            </div>
+
+            <div class="card">
+                <h3>📝 Online Quizzes</h3>
+                <p>Test your knowledge with interactive MCQs.</p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Track Progress</h3>
+                <p>Keep track of your learning and quiz performance.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>JK11 Study Hub © 2026</p>
+        <p>Made for Class 11 JKBOSE Students</p>
+    </footer>
+
+</body>
+</html>
