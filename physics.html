@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 11 Physics | JK11 Study Hub</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+header {
+    background: #102a43;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background: linear-gradient(135deg, #102a43, #176b87);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.chapters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.chapter {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border-left: 4px solid #176b87;
+}
+
+.chapter h3 {
+    color: #176b87;
+    margin-bottom: 10px;
+}
+
+.chapter p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #176b87;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #102a43;
+}
+
+.details {
+    display: none;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.details ul {
+    padding-left: 20px;
+}
+
+footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+}
+
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 29px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>JK11 Study Hub</h2>
+    <a href="index.html">← Back to Home</a>
+</header>
+
+<section class="hero">
+    <h1>Class 11 Physics</h1>
+    <p>Learn concepts. Understand formulas. Master numericals.</p>
+</section>
+
+<main class="container">
+
+<div class="heading">
+    <h2>Physics Chapters</h2>
+    <p>Select a chapter to explore its study topics.</p>
+</div>
+
+<div class="chapters" id="chapterList"></div>
+
+</main>
+
+<footer>
+    <p>JK11 Study Hub © 2026</p>
+    <p>Class 11 JKBOSE Learning Platform</p>
+</footer>
+
+<script>
+
+const chapters = [
+    ["Physical World", "Physics, its scope and fundamental forces."],
+    ["Units and Measurements", "Units, dimensions, errors and significant figures."],
+    ["Motion in a Straight Line", "Distance, displacement, velocity and acceleration."],
+    ["Motion in a Plane", "Vectors, projectile motion and circular motion."],
+    ["Laws of Motion", "Newton's laws, momentum and friction."],
+    ["Work, Energy and Power", "Work, kinetic energy, potential energy and collisions."],
+    ["System of Particles and Rotational Motion", "Centre of mass, torque and angular momentum."],
+    ["Gravitation", "Universal law, acceleration due to gravity and satellites."],
+    ["Mechanical Properties of Solids", "Stress, strain and elasticity."],
+    ["Mechanical Properties of Fluids", "Pressure, buoyancy and fluid flow."],
+    ["Thermal Properties of Matter", "Temperature, heat and thermal expansion."],
+    ["Thermodynamics", "Thermal equilibrium, laws of thermodynamics and heat engines."],
+    ["Kinetic Theory", "Gas laws, molecular motion and kinetic energy."],
+    ["Oscillations", "Periodic motion, simple harmonic motion and pendulums."],
+    ["Waves", "Wave motion, sound waves and superposition."]
+];
+
+const list = document.getElementById("chapterList");
+
+chapters.forEach((chapter, index) => {
+
+    const card = document.createElement("div");
+    card.className = "chapter";
+
+    card.innerHTML = `
+        <h3>Chapter ${index + 1}: ${chapter[0]}</h3>
+
+        <p>${chapter[1]}</p>
+
+        <button onclick="toggleChapter(${index})">
+            Explore Chapter
+        </button>
+
+        <div class="details" id="details${index}">
+            <strong>Study resources:</strong>
+            <ul>
+                <li>Chapter Notes</li>
+                <li>Important Formulas</li>
+                <li>NCERT Questions</li>
+                <li>Important Numericals</li>
+                <li>Practice MCQs</li>
+            </ul>
+            <p>Detailed study material is coming soon!</p>
+        </div>
+    `;
+
+    list.appendChild(card);
+
+});
+
+function toggleChapter(index) {
+
+    const box = document.getElementById("details" + index);
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
